@@ -11,26 +11,26 @@
 
 <body class="h-screen flex items-center justify-center">
   <div class="bg-gray-400 h-2/3 w-72 py-4 rounded-lg shadow-xl">
-    <input class="bg-white w-full py-5 focus:outline-none text-4xl text-left" id="display" type="text" >
+    <input class="bg-white w-full py-5 focus:outline-none text-4xl text-left text-black" id="display" type="text" readonly>
     <div class="grid grid-cols-4 mt-4 gap-2 px-2" >
-      <button class="btn-numbers btn-operators" onclick="concat()">C</button>
-      <button class="btn-numbers btn-operators"  onclick="concat()">&#x21FD</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">/</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">*</button>
-      <button class="btn-numbers" onclick="concat()">7</button>
-      <button class="btn-numbers" onclick="concat()">8</button>
-      <button class="btn-numbers" onclick="concat()">9</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">-</button>
-      <button class="btn-numbers" onclick="concat()">4</button>
-      <button class="btn-numbers" onclick="concat()">5</button>
-      <button class="btn-numbers" onclick="concat()">6</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">+</button>
-      <button class="btn-numbers" onclick="concat()">1</button>
-      <button class="btn-numbers" onclick="concat()">2</button>
-      <button class="btn-numbers " onclick="concat()">3</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">=</button>
-      <button class="btn-numbers" onclick="concat()">0</button>
-      <button class="btn-numbers btn-operators" onclick="concat()">.</button>
+      <button class="btn-numbers btn-operators" id="btnC">C</button>
+      <button class="btn-numbers btn-operators"  id="btnB">&#x21FD</button>
+      <button class="btn-numbers btn-operators" id="divisor">/</button>
+      <button class="btn-numbers btn-operators" id="mult">*</button>
+      <button class="btn-numbers" id="b7">7</button>
+      <button class="btn-numbers" id="b8">8</button>
+      <button class="btn-numbers" id="b9">9</button>
+      <button class="btn-numbers btn-operators" id="bminus">-</button>
+      <button class="btn-numbers" id="4">4</button>
+      <button class="btn-numbers" id="5">5</button>
+      <button class="btn-numbers" id="6">6</button>
+      <button class="btn-numbers btn-operators"id="plus">+</button>
+      <button class="btn-numbers" id="btn1">1</button>
+      <button class="btn-numbers" id="btn2">2</button>
+      <button class="btn-numbers" id="btn3">3</button>
+      <button class="btn-numbers btn-operators" id="equals" >=</button>
+      <button class="btn-numbers" id="btn0" >0</button>
+      <button class="btn-numbers btn-operators" id="btnD">.</button>
     </div>
   </div>
   <script type="module" src="/src/main.js"></script>
