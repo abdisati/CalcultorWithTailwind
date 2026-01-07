@@ -1,13 +1,39 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>calculator</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="src/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>calculator</title>
+</head>
+
+<body class="h-screen flex items-center justify-center">
+  <div class="bg-gray-400 h-2/3 w-72 py-4 rounded-lg shadow-xl">
+    <input class="bg-white w-full py-5 focus:outline-none text-4xl text-left" id="display" type="text" >
+    <div class="grid grid-cols-4 mt-4 gap-2 px-2" >
+      <button class="btn-numbers btn-operators" onclick="concat()">C</button>
+      <button class="btn-numbers btn-operators"  onclick="concat()">&#x21FD</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">/</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">*</button>
+      <button class="btn-numbers" onclick="concat()">7</button>
+      <button class="btn-numbers" onclick="concat()">8</button>
+      <button class="btn-numbers" onclick="concat()">9</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">-</button>
+      <button class="btn-numbers" onclick="concat()">4</button>
+      <button class="btn-numbers" onclick="concat()">5</button>
+      <button class="btn-numbers" onclick="concat()">6</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">+</button>
+      <button class="btn-numbers" onclick="concat()">1</button>
+      <button class="btn-numbers" onclick="concat()">2</button>
+      <button class="btn-numbers " onclick="concat()">3</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">=</button>
+      <button class="btn-numbers" onclick="concat()">0</button>
+      <button class="btn-numbers btn-operators" onclick="concat()">.</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

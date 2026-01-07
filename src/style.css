@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@layer components{
+  .btn-numbers{
+    @apply bg-blue-500 hover:bg-blue-700 active:bg-blue-300 text-white font-bold py-2 px-4 rounded
+  }
+
+  .btn-operators{
+    @apply bg-white hover:bg-gray-300 active:bg-amber-100 text-black font-bold py-2 px-4 rounded
+  }
+}
+
