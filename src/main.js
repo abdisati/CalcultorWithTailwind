@@ -10,6 +10,8 @@ button.addEventListener('click',(e)=>{
     clearV();
   }
   else if(buttonText==="⇽"){
+    if(displayEl.value==="Cannot devide by zero") clearV();
+    return;
     del();
   }
   else if(buttonText==="="){
@@ -43,5 +45,11 @@ function del(){
 }
 
 function Calculate(){
-  displayEl.value = eval(displayEl.value);
+  let text=displayEl.value;
+  //check if it includes division by zero
+  if(text.includes("/0")){
+    displayEl.value="Cannot devide by zero";
+    return;
+  }
+  displayEl.value = eval(text);
 }
