@@ -10,8 +10,8 @@ button.addEventListener('click',(e)=>{
     clearV();
   }
   else if(buttonText==="⇽"){
-    if(displayEl.value==="Cannot devide by zero") clearV();
-    return;
+    if(displayEl.value==="Cannot devide by zero") {clearV();
+    return;}
     del();
   }
   else if(buttonText==="="){
