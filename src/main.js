@@ -1,25 +1,47 @@
 const displayEl=document.getElementById("display");
-const clearEl=document.getElementById("btnC");
-const delEl=document.getElementById("btnB");
-const divisorEl=document.getElementById("divisor");
-const multiEl=document.getElementById("mult");
-const sevenEl=document.getElementById("b7");
-const eightEl=document.getElementById("b8");
-const nineEl=document.getElementById("b9");
-const minusEl=document.getElementById("bminus");
-const fourEl=document.getElementById("4");
-const fiveEl=document.getElementById("5");
-const sixEl=document.getElementById("6");
-const plusEl=document.getElementById("plus");
-const oneEl=document.getElementById("btn1");
-const twoEl=document.getElementById("btn2");
-const threeEl=document.getElementById("btn3");
-const equalEl=document.getElementById("equals");
-const zeroEl=document.getElementById("btn0");
+
+
+const numbersEl=document.querySelectorAll(".btn-numbers"); //this would return array of button elements
+numbersEl.forEach((button)=>{
+button.addEventListener('click',(e)=>{
+  const buttonText=e.target.innerText; //get the inner text of the target element
+
+  if(buttonText==="C"){
+    clearV();
+  }
+  else if(buttonText==="⇽"){
+    del();
+  }
+  else if(buttonText==="="){
+    Calculate();
+  }
+  else{
+    conc(buttonText);
+  }
+
+    //pass it to concat function
+})
+});
+
+
+//add event listener to the buttons
+
+
+
 function conc(val){
   displayEl.value+=val;
 }
 
-conc("5");
-conc('+');
-conc('9');
+function clearV(){
+  displayEl.value="";
+}
+
+function del(){
+  let text=displayEl.value;
+  text=text.substring(0,text.length-1);
+  displayEl.value=text;
+}
+
+function Calculate(){
+  displayEl.value = eval(displayEl.value);
+}
